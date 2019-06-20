@@ -8,13 +8,13 @@ const food = document.getElementById("food");
 document.body.onload = positionSwitch;
 
 function positionSwitch() {
-  randomX = Math.floor(Math.random() * 475);
-  randomY = Math.floor(Math.random() * 475);
+  randomX = Math.floor(Math.random() * 20) * 25;
+  randomY = Math.floor(Math.random() * 20) * 25;
 
   food.style.left = randomX + "px";
   food.style.top = randomY + "px";
 
-  console.log(randomX, randomY);
+  //   console.log(randomX, randomY);
 }
 
 //Make mover move when you press  keys
@@ -27,29 +27,39 @@ let moverTop = 0;
 
 function animate(e) {
   if (e.keyCode === 39) {
-    moverLeft += 2;
+    moverLeft += 25;
     if (moverLeft >= 475) {
       moverLeft = 475;
     }
   }
   if (e.keyCode === 37) {
-    moverLeft -= 2;
+    moverLeft -= 25;
     if (moverLeft <= 0) {
       moverLeft = 0;
     }
   }
   if (e.keyCode === 40) {
-    moverTop += 2;
+    moverTop += 25;
     if (moverTop >= 475) {
       moverTop = 475;
     }
   }
   if (e.keyCode === 38) {
-    moverTop -= 2;
+    moverTop -= 25;
     if (moverTop <= 0) {
       moverTop = 0;
     }
   }
   mover.style.left = moverLeft + "px";
   mover.style.top = moverTop + "px";
+
+  //   console.log(moverLeft, moverTop);
+
+  gotFood();
+}
+
+function gotFood() {
+  if (moverLeft == randomX && moverTop == randomY) {
+    positionSwitch();
+  }
 }
