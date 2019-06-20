@@ -1,6 +1,21 @@
-//Create variables for container and mover divs
+//Create variables for container, mover and food divs
 const container = document.getElementById("container");
 const mover = document.getElementById("mover");
+const food = document.getElementById("food");
+
+//Give food a random position
+
+document.body.onload = positionSwitch;
+
+function positionSwitch() {
+  randomX = Math.floor(Math.random() * 475);
+  randomY = Math.floor(Math.random() * 475);
+
+  food.style.left = randomX + "px";
+  food.style.top = randomY + "px";
+
+  console.log(randomX, randomY);
+}
 
 //Make mover move when you press  keys
 //keyCodes of arrow keys are left = 37, right = 39, up = 38, down = 40
