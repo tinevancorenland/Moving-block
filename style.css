@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  margin-top: 5px;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 5px solid black;
+  position: relative;
+}
+
+#mover {
+  width: 25px;
+  height: 25px;
+  background-color: olivedrab;
+  position: absolute;
+}
