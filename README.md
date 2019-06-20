@@ -8,7 +8,7 @@
 
 - Why?
 
-To learn 3 things
+To learn 3 things; guess which.
 
 ![Collision detection](https://media.giphy.com/media/GYA6gpMc1xqU/giphy.gif)
 
